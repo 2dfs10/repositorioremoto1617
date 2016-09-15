@@ -1,0 +1,9 @@
+src/analisiscodigoestatico/Multiplica.java:4:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/analisiscodigoestatico/Multiplica.java:4:	headerCommentRequirement Required
+src/analisiscodigoestatico/Multiplica.java:9:	Consider using varargs for methods or constructors which take an array the last parameter.
+src/analisiscodigoestatico/Multiplica.java:9:	Parameter 'args' is not assigned and could be declared final
+src/analisiscodigoestatico/Multiplica.java:11:	Found 'DD'-anomaly for variable 'producto' (lines '11'-'15').
+src/analisiscodigoestatico/Multiplica.java:11:	Found 'DD'-anomaly for variable 'sumando' (lines '11'-'14').
+src/analisiscodigoestatico/Multiplica.java:11:	Use one line for each declaration, it enhances code readability.
+src/analisiscodigoestatico/Multiplica.java:18:	System.out.println is used
+src/analisiscodigoestatico/Multiplica.java:19:	System.out.println is used
