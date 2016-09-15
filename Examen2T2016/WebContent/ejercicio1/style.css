@@ -1,0 +1,28 @@
+.table-students {
+  border-collapse: collapse;
+  border-top: 1px solid #e5eff8;
+  border-right: 1px solid #e5eff8;
+  margin: 1em;
+}
+
+.table-students th {
+  background: #f4f9fe;
+  font: bold 1.2em/2em "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #66a3d3;
+  padding: .5em;
+}
+
+.table-students td {
+  color: #678197;
+  border-bottom: 1px solid #e5eff8;
+  border-left: 1px solid #e5eff8;
+  padding: .3em 1em;
+}
+
+.table-students tr:nth-child(odd) {
+  background: #f7fbff;
+}
+
+a {
+  text-decoration: none;
+}

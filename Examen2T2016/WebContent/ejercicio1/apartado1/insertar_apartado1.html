@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="../jquery-2.1.4.min.js"></script>
+  <script src="apartado1.js"></script>
+  <title>Ejercicio 1</title>
+</head>
+<body>
+  <form action="insertar_apartado1.jsp" method="post">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <br>
+
+    <input type="number" name="codigo" placeholder="Código" required>
+    <br>
+
+    <input type="number" name="precio" placeholder="Precio" required>
+    <br>
+
+    Importado:
+    <select name="importado" required>
+      <option selected value="si">Sí</option>
+      <option value="no">No</option>
+    </select>
+    <br>
+
+    Almacen:
+    <input type="checkbox" name="almacen" value="huelva" required>Huelva
+    <input type="checkbox" name="almacen" value="sevilla" required>Sevilla
+    <input type="checkbox" name="almacen" value="cadiz" required>Cádiz
+    <input type="checkbox" name="almacen" value="malaga" required>Málaga
+    <br>
+    
+    Stock:
+    <input type="radio" name="stock" value="100" required>100%
+    <input type="radio" name="stock" value="75" required>75%
+    <input type="radio" name="stock" value="50" required>50%
+    <input type="radio" name="stock" value="25" required>25%
+    <br>
+
+    <input type="submit" value="Grabar">
+  </form>
+</body>
+</html>
