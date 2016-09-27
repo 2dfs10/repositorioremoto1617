@@ -28,12 +28,7 @@ import org.apache.commons.io.output.*;
 @WebServlet("/UploadServlet")
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-  
-
- 
-
-       
+      
        private boolean isMultipart;
        private String filePath;
        private int maxFileSize = 50 * 1024;

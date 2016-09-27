@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Primero extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	 private String cuenta;  
+	 
+	 private int contador;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -28,8 +29,9 @@ public class Primero extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
-		
+		String cuenta; 
 		cuenta = config.getInitParameter("contador");
+		contador = Integer.parseInt(cuenta);
 	}
 
 	/**
@@ -37,13 +39,15 @@ public class Primero extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Primerooooooo ").append(request.getContextPath());
+		//response.getWriter().append("Primerooooooo ").append(request.getContextPath());
 		PrintWriter out;
         out = response.getWriter();
-
-        response.setContentType("text/html");
+ 
 	
-	out.println(" El valor del contador es "+cuenta);	
+	out.println(" El valor del contador es " +contador);	
+	contador++;
+	out.print("<br>");
+	out.println("fffffff");
 	
 	}
 
