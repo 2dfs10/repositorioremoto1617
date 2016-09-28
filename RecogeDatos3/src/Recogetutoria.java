@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Recogetutoria")
 public class Recogetutoria extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	int cuenta = 0;
+	int visitas=1 ;
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -34,20 +34,26 @@ public class Recogetutoria extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		String valumno = request.getParameter("alumno");
-		String voculto=request.getParameter("oculto");
-		
+		String voculto=request.getParameter("contador");
+
 		String vprofesor = request.getParameter("profesor");
 
 		String vhora = request.getParameter("hora");
 
 		String[] vasignatura = request.getParameterValues("asignatura");
-
+		String vfoto = request.getParameter("foto");
 		String vobservaciones = request.getParameter("observaciones");
-		
-		out.println("Valor de oculto "+voculto);
-		
-		cuenta++;
-		out.println("Valor de cuenta "+cuenta);
+
+
+		out.println ("El valor de campo oculto es "+voculto);
+		out.print("<br>");
+		out.print("<br>");
+		out.println("Visitas "+visitas);
+		out.print("<br>");
+		out.print("<br>");
+		out.println("El valor del campo foto es "+ request.getParameter("foto"));
+		out.println("<img src = 'C:/Users/Public/Pictures/Sample Pictures/Dessert.jpg   width='400' height='300'>");
+
 		out.println(" El Nombre del alumno es:" + valumno);
 		out.print("<br>");
 		out.print("<br>");
@@ -72,13 +78,15 @@ public class Recogetutoria extends HttpServlet {
 
 		out.print("Observaciones :" + vobservaciones);
 
-		response.setHeader("Refresh", "10;URL=Recoge2");
+		response.setIntHeader(2);
+		//response.setHeader("Refresh", "10;URL=Recoge2");
 
 		/*
 		 * response.setHeader("Refresh",
 		 * "10;URL=paginacheckboxradiobottom.html");
 		 */
 
+		visitas++;
 	}
 
 	/**
