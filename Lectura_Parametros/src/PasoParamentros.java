@@ -12,23 +12,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Prueba1
+ * Servlet implementation class PasoParamentros
  */
 @WebServlet(
-		urlPatterns = {
-				"/Prueba1",
-				"/Mapeo"
-		},
+		urlPatterns = { "/PasoParamentros" },
 		initParams = {
-				@WebInitParam(name = "name", value = "Gomez", description = "Guarda el apellido del alumno")
+				@WebInitParam(name = "nombre", value = "Jose"),
+				@WebInitParam(name = "apellidos", value = "riquelme")
 		})
-public class Prueba1 extends HttpServlet {
+public class PasoParamentros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      private String vname;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Prueba1() {
+    public PasoParamentros() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,25 +34,27 @@ public class Prueba1 extends HttpServlet {
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
-	/*public void init(ServletConfig config) throws ServletException {
+	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
-		vname=config.getInitParameter("name");
 
-	}*/
+
+
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-		   response.setContentType("text/html");
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		PrintWriter out;
         out = response.getWriter();
+    	String vnombre = getInitParameter("nombre");
+		String vapell = getInitParameter("apellidos");
 
-     out.println(" el valor del nombre vale "+vname);
-
+		out.println(" El nombre es "+vnombre);
+		out.println(" El apellido es "+vapell);
 
 	}
 

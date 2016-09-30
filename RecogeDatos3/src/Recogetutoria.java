@@ -78,7 +78,8 @@ public class Recogetutoria extends HttpServlet {
 
 		out.print("Observaciones :" + vobservaciones);
 
-		response.setIntHeader(2);
+		response.setHeader("Refresh", "5;URL=Hola");
+
 		//response.setHeader("Refresh", "10;URL=Recoge2");
 
 		/*
